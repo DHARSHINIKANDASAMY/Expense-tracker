@@ -1,0 +1,122 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body{
+  background-color: #ebebf1;
+  color:#333;
+}
+.expense-container{
+  background-color:#e9eef0;
+  border-radius:10px;
+  box-shadow:0 2px 4px rgba(0, 0, 0.1);
+  padding:20px;
+  max-width:600px;
+  margin:20px auto;
+
+}
+.expense-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:5px;
+  margin:10px;
+}
+.expense-item.income{
+  border-right:5px solid green;
+
+}
+.expense-item.expense{
+border-right:5px solid rgb(195, 7, 7);
+}
+.expense-item.income .expense-amount{
+  color:green;
+
+}
+.expense-item.expense .expense-amount{
+color: rgb(195, 7, 7);
+}
+.expense-form{
+  padding:10px;
+  padding-top:0;
+  border:1px solid #ddd;
+  border-radius:5px;
+  margin-top:20px;
+}
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:10px;
+}
+input{
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:5px;
+}
+button{
+  padding:10px;
+  border-radius:5px;
+  border:none;
+  background-color:#2f0862;
+  color: #fff;
+  cursor:pointer;
+  width:100%;
+
+}
+
+.balance-container{
+  background-color:#5c3590;
+  border-radius:10px;
+  padding:20px;
+  display:flex;
+  justify-content:space-around;
+}
+.currency-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  border-radius:10px;
+  background-color:#c0c1e8;
+  color:#fff;
+  padding:20px 30px;  
+}
+.currency-item .title{
+  font-size:14px;
+  text-transform:uppercase;
+}
+.currency-item .amount{
+  font-size:24px;
+  font-weight:bold;
+}
+.currency-item .amount.income{
+  color:#76ff76;
+}
+.currency-item .amount.expense{
+  color:#bc0f09;
+}
+.error{
+  color:red;
+  font-size:12px;
+  margin-bottom:10px;
+}
+.expense-item.isEditing{
+  border: 5px solid rgb(54, 5, 100)
+}
+.expense-form .clear-button{
+  display:flex;
+  gap:10px;
+}
+.expense-form .small-button{
+  width:20%;
+   padding:5px;
+  border:none;
+  border-radius:10px;
+ cursor:pointer;
+ margin-top:15px;
+height:35px;
+}
