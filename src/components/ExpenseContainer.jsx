@@ -10,7 +10,7 @@ const ExpenseContainer = () => {
   const fetchExpense=async()=>{
     // setLoading(true);
     try{
-      const response=await fetch(`http://localhost:3000/expense`);
+      const response=await fetch(`https://expense-tracker-backend-4-irrz.onrender.com/expense`);
       const data=await response.json();
       setExpenses(data); 
     }catch(err){
@@ -23,7 +23,7 @@ const ExpenseContainer = () => {
 
   const addExpense=async(title,amount)=>{
 try{
-  const response =await fetch(`http://localhost:3000/expense`,{
+  const response =await fetch(`https://expense-tracker-backend-4-irrz.onrender.com/expense`,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({title,amount}),
@@ -42,7 +42,7 @@ try{
 
 const editExpense=async(id,title,amount)=>{
   try{
-    const response=await fetch(`http://localhost:3000/expense/${id}`,{
+    const response=await fetch(`https://expense-tracker-backend-4-irrz.onrender.com/expense/${id}`,{
       method:'PUT',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({title,amount}),
@@ -62,7 +62,7 @@ const editExpense=async(id,title,amount)=>{
 
 const deleteExpense=async(id)=>{
   try{
-    const response=await fetch(`http://localhost:3000/expense/${id}`,{
+    const response=await fetch(`https://expense-tracker-backend-4-irrz.onrender.com/expense/${id}`,{
       method:'DELETE',
     });
     if(response.ok){
