@@ -18,7 +18,7 @@ const ExpenseItem=(props)=>{
                 <button onClick={handleEdit}>Edit</button>
                 <button onClick={handleDelete}>Delete</button>
             </div>
-        
+          </div>
     );
 };
 export default ExpenseItem;
