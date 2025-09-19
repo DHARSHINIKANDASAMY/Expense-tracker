@@ -3,7 +3,7 @@ const BalanceContainer=(props)=>{
     const {expenses}=props;
     const incomeArr=expenses.filter((expense)=>expense.amount>0)
     const expenseArr=expenses.filter((expense)=>expense.amount<0)
-    let income1=0;
+    let income=0;
     let expense=0;
     incomeArr.forEach((item)=>{
         income+=parseInt(item.amount);
